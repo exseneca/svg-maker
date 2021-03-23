@@ -1,0 +1,24 @@
+{% load static %}
+<html>
+    <head>
+        <title>Image to Svg</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'BWSvg/home.css' %}">
+     
+    </head>
+    <body>
+        <div id="wholeContainer">
+            <div id="imageContainer">
+                <div id="imageBefore" class="image"><img id="img1" src="{% static 'BWSvg/spermwhale.jpg' %}"></div><div id="imageAfter" class="image"><img id="img2" src="{% static 'BWSvg/bmspermwhale.jpg' %}"></div>
+            </div>
+            <div id="buttons">
+                <div id="UploadButton" class="button"><a class="button" href="/upload">Upload Image</a></div><div id="DownloadButton" class="button"> 
+                    Move to change threshold <div id="slider" class="slider">
+                        <div id="slidecursor" class="thumb"></div>
+                      </div>
+                      <div class="button"><a class="button" href="/download">Download SVG</a></div>
+                </div>
+                
+            </div>
+    </body>
+    <script src="{% static 'BWSvg/home.js' %}"></script>
+</html>
