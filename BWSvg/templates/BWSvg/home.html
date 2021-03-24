@@ -8,7 +8,7 @@
     <body>
         <div id="wholeContainer">
             <div id="imageContainer">
-                <div id="imageBefore" class="image"><img id="img1" src="{% static 'BWSvg/spermwhale.jpg' %}"></div><div id="imageAfter" class="image"><img id="img2" src="{% static 'BWSvg/bmspermwhale.jpg' %}"></div>
+                <div id="imageBefore" class="image"><img id="img1" src="{{ before_img_url }}"></div><div id="imageAfter" class="image"><img id="img2" src="{{ out_file_urls.175 }}"></div>
             </div>
             <div id="buttons">
                 <div id="UploadButton" class="button"><a class="button" href="/upload">Upload Image</a></div><div id="DownloadButton" class="button"> 

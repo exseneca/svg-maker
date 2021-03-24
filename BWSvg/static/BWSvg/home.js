@@ -1,6 +1,7 @@
 
 
 let thumb = document.getElementById('slidecursor');
+let threshold = 0;
 
 thumb.onmousedown = function(event) {
   event.preventDefault(); // prevent selection start (browser action)
@@ -22,6 +23,12 @@ thumb.onmousedown = function(event) {
     if (newLeft > rightEdge) {
       newLeft = rightEdge;
     }
+    let sliderWidth = slider.offsetWidth;
+    let percentageAcross = (newLeft/sliderWidth).toPrecision(5);
+    threshold = Math.floor(255*percentageAcross);
+    let after_image = document.getElementById('img2');
+    after_image.src = after_image.src.split('threshold')[0] + 'threshold-' + threshold.toString() + '.jpg';
+
 
     thumb.style.left = newLeft + 'px';
   }

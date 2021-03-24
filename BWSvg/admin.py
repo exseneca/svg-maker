@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import BeforeImage, AfterImage
 
-# Register your models here.
+admin.site.register(BeforeImage)
+admin.site.register(AfterImage)
